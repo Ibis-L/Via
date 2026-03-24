@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0D0D0D">
+
+    <!-- Google Map takes 70% of screen height -->
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"/>
+
+    <!-- Detail panel below map -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="#1A1A1A"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:spacing="8dp">
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address: —"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvLatLng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lat/Lon: —"
+                android:textColor="#AAAAAA"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvLastAlert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last alert: —"
+                android:textColor="#AAAAAA"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvLastUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Updated: —"
+                android:textColor="#888888"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginBottom="12dp"/>
+
+            <Button
+                android:id="@+id/btnShare"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Share Location"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1E88E5"
+                android:fontFamily="sans-serif-medium"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
